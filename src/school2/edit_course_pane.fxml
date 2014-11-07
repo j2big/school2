@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="academic_display_pane" prefHeight="515.0" prefWidth="700.0" styleClass="background_layer2" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.Edit_course_paneController">
+  <stylesheets>
+    <URL value="@school2.css" />
+  </stylesheets>
+</AnchorPane>

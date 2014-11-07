@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="academic_display_pane" prefHeight="-1.0" prefWidth="700.0" styleClass="background_layer2" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.Remove_course_paneController">
+  <children>
+    <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <ListView prefHeight="-1.0" prefWidth="281.0" />
+        <AnchorPane prefHeight="515.0" prefWidth="414.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER" fillHeight="true" layoutX="42.0" layoutY="112.0" spacing="20.0">
+              <children>
+                <VBox id="VBox" alignment="CENTER_RIGHT" fillWidth="true" spacing="24.0">
+                  <children>
+                    <Label text="course title:" />
+                    <Label text="course code:" />
+                    <Label text="course unit:" />
+                    <Label text="course type:" />
+                    <Label text="course lecturer:" />
+                  </children>
+                </VBox>
+                <VBox id="VBox" alignment="CENTER_LEFT" spacing="24.0">
+                  <children>
+                    <Label fx:id="course_title_label" text="" />
+                    <Label fx:id="course_code_label" text="" />
+                    <Label fx:id="course_unit_label" text="" />
+                    <Label fx:id="course_type_label" text="" />
+                    <Label fx:id="course_lecturer_label" text="" />
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+            <Button fx:id="remove_course_button" minHeight="29.0" mnemonicParsing="false" onMouseClicked="#removeCourseButtonClick" prefHeight="29.0" prefWidth="85.0" styleClass="element-red" text="remove" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="146.0" />
+          </children>
+        </AnchorPane>
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@school2.css" />
+  </stylesheets>
+</AnchorPane>

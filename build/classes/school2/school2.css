@@ -1,0 +1,106 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 23, 2014, 8:59:09 PM
+    Author     : Joshua
+*/
+.root{
+
+}
+.scroll-pane{
+    -fx-background-color:#181818;
+}
+.main-menu-button{
+    -fx-font-family:lao ui;
+    -fx-font-weight:bold;
+    -fx-font-size:10px;
+    -fx-background-color:#111111;
+}
+.main-menu-button .label{
+    -fx-text-fill:#ffffff;
+}
+
+.menu-item{
+    -fx-font-size:10px;
+    -fx-background-color:#111111;
+}
+.button{
+    -fx-font-family:lao ui;
+    -fx-font-weight:bold;
+    -fx-font-size:15px;
+    -fx-text-fill: #ffffff;
+    -fx-background-color:#222222;
+}
+.menu-buttons.button{
+    -fx-background-color:#333333;
+    -fx-font-weight:normal;
+    -fx-font-size:9px;
+    -fx-text-fill: white; 
+    
+}
+.menu-item:focused{
+    -fx-background-color:#106435;
+}
+.main-menu-button .arrow{
+    -fx-background-color:#106435;
+}
+.main_background{
+    -fx-background-color:#222222;
+}
+.main_background_with_border{
+    -fx-background-color:#222222;
+    -fx-border-color:rgba(0,0,0,0.2);
+}
+.mini_header_text_white{
+    -fx-font-family:Lao ui;
+    -fx-font-size:15px;
+}
+.element-green{
+    -fx-background-color:#106435;
+}
+.element-torqoise{
+    -fx-background-color:#1E7983;
+}
+.element-red{
+    -fx-background-color: #d30811;
+}
+.element-orange{
+    -fx-background-color:#D74E2A;
+
+}
+.background_layer2{
+    -fx-background-color:#181818;
+}
+.dropdown{
+    -fx-background-color:#0070C0;
+}
+.header_pane{
+    -fx-background-color:#ffffff;
+}
+.mini_pane_with_border{
+    -fx-background-color:#181818;
+    -fx-border-color:rgba(0,0,0,0.2);
+}
+.mini_pane{
+    -fx-background-color:#181818;
+}
+.label{
+    -fx-font-family:lao ui;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight:normal;
+    -fx-font-size:15px;
+}
+.info-label-bold{
+    -fx-font-family:lao ui;
+    -fx-text-fill: black;
+    -fx-font-weight:bold;
+    -fx-font-size:13px;
+}.info-label-normal{
+    -fx-font-family:lao ui;
+    -fx-text-fill: black;
+    -fx-font-weight:normal;
+    -fx-font-size:10px;
+}

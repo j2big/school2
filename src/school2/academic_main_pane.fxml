@@ -56,6 +56,6 @@
     </AnchorPane>
   </children>
   <stylesheets>
-    <URL value="file:/C:/Users/Joshua/Desktop/Projects/School2/src/school2/school2.css" />
+    <URL value="@school2.css" />
   </stylesheets>
 </AnchorPane>

@@ -15,7 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
-
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
@@ -104,19 +103,23 @@ public class Academic_main_paneController implements Initializable {
     }
 
     @FXML
-    private void classWorkScoreOptionClick(ActionEvent event) {
+    private void classWorkScoreOptionClick(ActionEvent event) throws Exception {
+        loadView("add_classwork_pane.fxml");
     }
 
     @FXML
-    private void assignmentScoreOptionClick(ActionEvent event) {
+    private void assignmentScoreOptionClick(ActionEvent event) throws Exception {
+        loadView("add_assignment_pane.fxml");
     }
 
     @FXML
-    private void testScoreOptionClick(ActionEvent event) {
+    private void testScoreOptionClick(ActionEvent event) throws Exception {
+        loadView("add_test_pane.fxml");
     }
 
     @FXML
-    private void examScoreOptionClcik(ActionEvent event) {
+    private void examScoreOptionClcik(ActionEvent event) throws Exception {
+        loadView("add_exam_pane.fxml");
     }
 
     @FXML

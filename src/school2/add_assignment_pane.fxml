@@ -53,7 +53,7 @@
     </VBox>
     <Pane prefHeight="34.0" prefWidth="700.0" styleClass="header_pane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
-        <Label fx:id="HEADER" layoutX="258.0" layoutY="11.0" prefWidth="185.0" styleClass="info-label-bold" text="ADD ASSIGNMENT SCORE" textAlignment="JUSTIFY" />
+        <Label fx:id="HEADER" layoutX="290.0" layoutY="11.0" prefWidth="185.0" styleClass="info-label-bold" text="ADD ASSIGNMENT SCORE" textAlignment="JUSTIFY" />
       </children>
     </Pane>
   </children>

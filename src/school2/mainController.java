@@ -20,7 +20,6 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
 
 /**
  *
@@ -52,23 +51,36 @@ public class mainController implements Initializable {
     @FXML
     private ScrollPane scroll_pane;
     @FXML
-    private Pane dummy_pane;
-    @FXML
-    private Button options_button;
-    @FXML
-    private Button global_button;
-    @FXML
-    private Button help_button;
-    @FXML
     private Label username_info_text;
     @FXML
     private Label school_info_text;
-    @FXML
-    private ImageView school_logo;
+
     @FXML
     private ImageView settings_button;
     @FXML
     private ImageView user_avatar;
+    @FXML
+    private ImageView message_image_button;
+    @FXML
+    private ImageView chat_image_button;
+    @FXML
+    private ImageView room_image_button;
+    @FXML
+    private ImageView alertButton;
+    @FXML
+    private ImageView search_image_button;
+    @FXML
+    private ImageView options_image_button;
+    @FXML
+    private ImageView global_image_button;
+    @FXML
+    private ImageView help_image_button;
+    @FXML
+    private ImageView school_logo;
+    @FXML
+    private AnchorPane parent_main_pane;
+    @FXML
+    private AnchorPane daughter_main_pane;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -106,6 +118,12 @@ public class mainController implements Initializable {
     private void trayOptionClick(ActionEvent event) {
     }
 
+    public void loadTabView(String fxml) throws Exception {
+        parent_main_pane.getChildren().remove(0);
+        Node node = FXMLLoader.load(getClass().getResource(fxml));
+        parent_main_pane.getChildren().add(node);
+    }
+
     public void loadView(String fxml) throws Exception {
         main_pane.getChildren().remove(0);
         Node node = FXMLLoader.load(getClass().getResource(fxml));
@@ -117,15 +135,7 @@ public class mainController implements Initializable {
     }
 
     @FXML
-    private void globalbuttonsClicked(MouseEvent event) {
-    }
-
-    @FXML
     private void helpButtonClicked(MouseEvent event) {
-    }
-
-    @FXML
-    private void schoolLogoClicked(MouseEvent event) {
     }
 
     @FXML
@@ -134,5 +144,32 @@ public class mainController implements Initializable {
 
     @FXML
     private void userAvatarClicked(MouseEvent event) {
+    }
+
+    @FXML
+    private void chatButtonClicked(MouseEvent event) throws Exception {
+        loadTabView("chat_pane.fxml");
+    }
+
+    @FXML
+    private void roomButtonClicked(MouseEvent event) throws Exception {
+        loadTabView("rooms_pane.fxml");
+
+    }
+
+    @FXML
+    private void alertButtonClicked(MouseEvent event) {
+    }
+
+    @FXML
+    private void searchButtonClicked(MouseEvent event) {
+    }
+
+    @FXML
+    private void globalButtonClicked(MouseEvent event) {
+    }
+
+    @FXML
+    private void schoolLogoClicked(MouseEvent event) {
     }
 }

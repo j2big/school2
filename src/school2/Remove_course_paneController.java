@@ -7,8 +7,7 @@ package school2;
 
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -38,7 +37,7 @@ public class Remove_course_paneController implements Initializable {
 
     private String ctitle, ccode, cunit, ctype, clecturer;
     private Connection connection;
-    private PreparedStatement preparedStatement;
+    private Statement statement;
 
     /**
      * Initializes the controller class.
@@ -56,14 +55,7 @@ public class Remove_course_paneController implements Initializable {
 
     public void pullDatabase() throws Exception {
         rcp.log("Connecting to Database");
-        String sql = "insert into course_table values(?,?,?,?,?);";
+       
 
-        Class.forName("org.sqlite.JDBC");
-        connection = DriverManager.getConnection("jdbc:sqlite:database/school2.db");
-        preparedStatement = connection.prepareStatement(sql);
-        
-        
-        
-        connection.close();
     }
 }

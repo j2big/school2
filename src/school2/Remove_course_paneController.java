@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package school2;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,6 +22,7 @@ import javafx.scene.input.MouseEvent;
  * @author Joshua
  */
 public class Remove_course_paneController implements Initializable {
+
     @FXML
     private Button remove_course_button;
     @FXML
@@ -33,16 +36,34 @@ public class Remove_course_paneController implements Initializable {
     @FXML
     private Label course_lecturer_label;
 
+    private String ctitle, ccode, cunit, ctype, clecturer;
+    private Connection connection;
+    private PreparedStatement preparedStatement;
+
     /**
      * Initializes the controller class.
      */
+    Logger rcp = new Logger();
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void removeCourseButtonClick(MouseEvent event) {
     }
-    
+
+    public void pullDatabase() throws Exception {
+        rcp.log("Connecting to Database");
+        String sql = "insert into course_table values(?,?,?,?,?);";
+
+        Class.forName("org.sqlite.JDBC");
+        connection = DriverManager.getConnection("jdbc:sqlite:database/school2.db");
+        preparedStatement = connection.prepareStatement(sql);
+        
+        
+        
+        connection.close();
+    }
 }

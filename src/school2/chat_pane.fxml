@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="-1.0" prefWidth="-1.0" styleClass="mainFxmlClass, main_background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.Message_paneController">
+<AnchorPane id="AnchorPane" prefHeight="-1.0" prefWidth="-1.0" styleClass="mainFxmlClass, main_background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.Chat_paneController">
   <children>
     <Pane prefHeight="22.0" prefWidth="1070.0" styleClass="header_pane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
       <children>

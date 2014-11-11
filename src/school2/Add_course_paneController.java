@@ -6,7 +6,10 @@
 package school2;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -33,18 +36,28 @@ public class Add_course_paneController implements Initializable {
     private TextField course_lecturer_text;
     @FXML
     private Button add_course_button;
+    ArrayList<String> type = new ArrayList<>();
+    ObservableList<String> cType;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        type.add("Elective");
+        type.add("Compulsory");
+
+        cType = FXCollections.observableList(type);
+        course_type_choice.setItems(cType);
 
     }
+    Logger acp = new Logger();
 
     @FXML
     private void addCourseButtonClick(MouseEvent event) {
+        acp.log("Add course button clicked!");
         AddCourseDBHandler addc = new AddCourseDBHandler(getCourseTitle(), getCourseCode(), getCourseUnit(), getCourseType(), getCourseLecturer());
+        clearALL();
     }
 
     public String getCourseTitle() {
@@ -74,5 +87,13 @@ public class Add_course_paneController implements Initializable {
                 break;
         }
         return x;
+    }
+
+    public void clearALL() {
+        course_title_text.clear();
+        course_lecturer_text.clear();
+        course_unit_text.clear();
+        course_code_text.clear();
+        course_type_choice.getItems().clear();
     }
 }

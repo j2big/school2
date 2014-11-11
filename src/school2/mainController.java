@@ -39,28 +39,21 @@ public class mainController implements Initializable {
     @FXML
     private AnchorPane updates_pane;
     @FXML
-    private MenuButton main_options_button;
-    @FXML
     private MenuButton filter_menu;
-    @FXML
-    private MenuItem close_option;
-    @FXML
-    private MenuItem tray_option;
     @FXML
     private AnchorPane scrollpane_pane;
     @FXML
     private ScrollPane scroll_pane;
     @FXML
-    private Label username_info_text;
+    private AnchorPane parent_main_pane;
     @FXML
-    private Label school_info_text;
-
+    private AnchorPane daughter_main_pane;
     @FXML
-    private ImageView settings_button;
+    private ImageView options_image_button;
     @FXML
-    private ImageView user_avatar;
+    private ImageView global_image_button;
     @FXML
-    private ImageView message_image_button;
+    private ImageView help_image_button;
     @FXML
     private ImageView chat_image_button;
     @FXML
@@ -70,17 +63,21 @@ public class mainController implements Initializable {
     @FXML
     private ImageView search_image_button;
     @FXML
-    private ImageView options_image_button;
+    private Label username_info_text;
     @FXML
-    private ImageView global_image_button;
-    @FXML
-    private ImageView help_image_button;
+    private Label school_info_text;
     @FXML
     private ImageView school_logo;
     @FXML
-    private AnchorPane parent_main_pane;
+    private ImageView settings_button;
     @FXML
-    private AnchorPane daughter_main_pane;
+    private ImageView user_avatar;
+    @FXML
+    private MenuButton main_options_button;
+    @FXML
+    private MenuItem close_option;
+    @FXML
+    private MenuItem tray_option;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -131,7 +128,8 @@ public class mainController implements Initializable {
     }
 
     @FXML
-    private void optionsButtonClicked(MouseEvent event) {
+    private void optionsButtonClicked(MouseEvent event) throws Exception {
+        loadTabView("daughter_pane.fxml");
     }
 
     @FXML
@@ -158,6 +156,10 @@ public class mainController implements Initializable {
     }
 
     @FXML
+    private void globalButtonClicked(MouseEvent event) {
+    }
+
+    @FXML
     private void alertButtonClicked(MouseEvent event) {
     }
 
@@ -166,10 +168,7 @@ public class mainController implements Initializable {
     }
 
     @FXML
-    private void globalButtonClicked(MouseEvent event) {
-    }
-
-    @FXML
     private void schoolLogoClicked(MouseEvent event) {
     }
+
 }

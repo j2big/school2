@@ -49,7 +49,6 @@ public class Add_course_paneController implements Initializable {
 
         cType = FXCollections.observableList(type);
         course_type_choice.setItems(cType);
-
     }
     Logger acp = new Logger();
 

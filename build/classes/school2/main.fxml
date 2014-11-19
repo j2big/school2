@@ -83,7 +83,7 @@
                         </ImageView>
                         <ImageView fx:id="settings_button" fitHeight="22.0" fitWidth="22.0" onMouseClicked="#settingsButtonClicked" pickOnBounds="true" preserveRatio="true">
                           <image>
-                            <Image url="@media/images.png" />
+                            <Image url="@media/settings.fw.png" />
                           </image>
                         </ImageView>
                       </children>

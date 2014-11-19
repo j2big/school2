@@ -11,7 +11,7 @@
   <children>
     <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
-        <ListView prefHeight="-1.0" prefWidth="281.0" />
+        <ListView fx:id="coursesList" prefHeight="-1.0" prefWidth="281.0" HBox.hgrow="NEVER" />
         <AnchorPane prefHeight="515.0" prefWidth="414.0">
           <children>
             <HBox id="HBox" alignment="CENTER" fillHeight="true" layoutX="42.0" layoutY="112.0" spacing="20.0">

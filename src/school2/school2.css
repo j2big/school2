@@ -90,6 +90,12 @@ and open the template in the editor.
 .element-torqoise{
     -fx-background-color:#1E7983;
 }
+.white-labels{
+    -fx-font-family:lao ui;
+    -fx-font-weight:bold;
+    -fx-font-size:10px;
+    -fx-text-fill: red;
+}
 .element-red{
     -fx-background-color: #d30811;
 }

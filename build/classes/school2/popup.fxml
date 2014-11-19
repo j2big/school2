@@ -10,27 +10,27 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.PopupController">
-  <children>
-    <Pane layoutX="164.0" layoutY="73.0" prefHeight="200.0" prefWidth="300.0">
-      <children>
-        <ImageView fitHeight="200.0" fitWidth="300.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
-          <image>
-            <Image url="@../../../../popup.fw.png" />
-          </image>
-        </ImageView>
-        <ImageView fx:id="alert_icon" fitHeight="74.0" fitWidth="98.66666666666666" layoutX="14.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true" />
-        <Label fx:id="alert_header" layoutX="113.0" layoutY="10.0" text="">
-          <font>
-            <Font name="System Bold" size="30.0" />
-          </font>
-        </Label>
-        <Label fx:id="alert_text" layoutX="14.0" layoutY="100.0" text="">
-          <font>
-            <Font size="20.0" />
-          </font>
-        </Label>
-        <Button fx:id="ok_button" layoutX="252.0" layoutY="170.0" minHeight="23.54296875" mnemonicParsing="false" onMouseClicked="#okButtonClick" prefHeight="23.54296875" prefWidth="42.0" text="ok" />
-      </children>
-    </Pane>
-  </children>
+    <children>
+        <Pane layoutX="164.0" layoutY="73.0" prefHeight="200.0" prefWidth="300.0">
+            <children>
+                <ImageView fitHeight="200.0" fitWidth="300.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../popup.fw.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="alert_icon" fitHeight="74.0" fitWidth="98.66666666666666" layoutX="14.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true" />
+                <Label fx:id="alert_header" layoutX="113.0" layoutY="10.0" text="">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+                <Label fx:id="alert_text" layoutX="14.0" layoutY="100.0" text="">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Button fx:id="ok_button" layoutX="252.0" layoutY="170.0" minHeight="23.54296875" mnemonicParsing="false" onMouseClicked="#okButtonClick" prefHeight="23.54296875" prefWidth="42.0" text="ok" />
+            </children>
+        </Pane>
+    </children>
 </AnchorPane>

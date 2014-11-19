@@ -11,7 +11,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -33,7 +32,7 @@ public class School2 extends Application {
 
         Scene scene = new Scene(root);
 
-       // firstTime = true;
+        // firstTime = true;
         //make stage fit any screen size
         Rectangle2D screen = Screen.getPrimary().getVisualBounds();
         stage.setX(screen.getMinX());

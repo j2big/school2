@@ -11,9 +11,9 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="School2.jar" size="4076790" download="eager" />
+    <jar href="School2.jar" size="4077857" download="eager" />
     <jar href="lib/schudt-javafx-datepicker-0.0.2.jar" size="72568" download="eager" />
-    <jar href="lib/sqlite-jdbc-3.7.15-M1.jar" size="3686929" download="eager" />
+    <jar href="lib/sqlite-jdbc-3.7.15-M1.jar" size="3686930" download="eager" />
   </resources>
 <security>
   <all-permissions/>

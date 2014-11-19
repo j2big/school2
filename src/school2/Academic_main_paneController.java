@@ -86,7 +86,7 @@ public class Academic_main_paneController implements Initializable {
 
     @FXML
     private void analysisMenuButtonClick(ActionEvent event) {
-    }   
+    }
 
     @FXML
     private void addCourseOptionClick(ActionEvent event) throws Exception {

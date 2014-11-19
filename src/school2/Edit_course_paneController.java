@@ -68,9 +68,15 @@ public class Edit_course_paneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ecp.log("Inside Edit Courses");
+        save_course_button.setDisable(true);
+        loadList();
+        getSelectedItem();
+    }
+
+    public void loadList() {
+
         coursesOList = FXCollections.observableList(edb.getCourseTitles());
         coursesList.setItems(coursesOList);
-        getSelectedItem();
     }
 
     public void getSelectedItem() {
@@ -89,11 +95,26 @@ public class Edit_course_paneController implements Initializable {
 
     @FXML
     private void editCourseButtonClick(MouseEvent event) {
-        course_title_edit.setEditable(true);
+        edit_course_button.setDisable(true);
+        save_course_button.setDisable(false);
+
+        setEnabled();
+    }
+
+    public void setEnabled() {
+        course_title_edit.setEditable(false);
         course_code_edit.setEditable(true);
         course_unit_edit.setEditable(true);
         course_type_edit.setEditable(true);
         course_lecturer_edit.setEditable(true);
+    }
+
+    public void setDisabled() {
+        course_title_edit.setEditable(false);
+        course_code_edit.setEditable(false);
+        course_unit_edit.setEditable(false);
+        course_type_edit.setEditable(false);
+        course_lecturer_edit.setEditable(false);
     }
 
     public void setTexts() {
@@ -127,8 +148,8 @@ public class Edit_course_paneController implements Initializable {
                 clecturer = resultSet.getString("course_lecturer");
             }
 
-        } catch (Exception er) {
-            er.printStackTrace();
+        } catch (Exception editCourseLoadError) {
+            editCourseLoadError.printStackTrace();
         } finally {
             try {
                 connection.close();
@@ -136,15 +157,55 @@ public class Edit_course_paneController implements Initializable {
             } catch (SQLException er) {
                 er.printStackTrace();
             }
-
         }
 
     }
 
+    public String getCourseUnit() {
+        return course_unit_edit.getText();
+    }
+
+    public String getCourseTitle() {
+        return course_title_edit.getText();
+    }
+
+    public String getCourseCode() {
+        return course_code_edit.getText();
+    }
+
+    public String getCourseType() {
+        return course_type_edit.getText();
+    }
+
+    public String getCourseLecturer() {
+        return course_lecturer_edit.getText();
+    }
+
     @FXML
     private void savebuttonClick(MouseEvent event) {
-        
-        
-        
+        save_course_button.setDisable(true);
+        edit_course_button.setDisable(false);
+        setDisabled();
+        ecp.log("Database Updated");
+        updateDatabase(getCourseTitle(), getCourseCode(), getCourseUnit(), getCourseType(), getCourseLecturer());
     }
+
+    public void updateDatabase(String c_title, String c_code, String c_unit, String c_type, String c_lecturer) {
+        String updatesql = "update course_table set course_unit='" + c_unit + "',course_code='" + c_code + "',course_type='" + c_type + "',course_lecturer='" + c_lecturer + "' where course_title='" + c_title + "'";
+
+        try {
+            Class.forName("org.sqlite.JDBC");
+            connection = DriverManager.getConnection("jdbc:sqlite:database/school2.db");
+            preparedStatement = connection.prepareStatement(updatesql);
+            preparedStatement.executeUpdate();
+            ecp.log("Database Updated");
+
+            connection.close();
+            preparedStatement.close();
+        } catch (Exception updateEditError) {
+            updateEditError.printStackTrace();
+        }
+
+    }
+
 }

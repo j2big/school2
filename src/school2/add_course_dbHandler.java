@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package school2;
 
 /**
@@ -11,5 +10,5 @@ package school2;
  * @author Joshua
  */
 public class add_course_dbHandler {
-    
+
 }

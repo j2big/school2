@@ -19,6 +19,7 @@ import javafx.scene.control.TextField;
  * @author jafolabi
  */
 public class Add_assignment_paneController implements Initializable {
+
     @FXML
     private ChoiceBox<?> course_title_choicebox;
     @FXML
@@ -36,6 +37,6 @@ public class Add_assignment_paneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

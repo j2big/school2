@@ -62,7 +62,7 @@ and open the template in the editor.
 }
 .menu-buttons.button{
     -fx-background-color:#333333;
-    -fx-font-weight:normal;
+    -fx-font-weight:bold;
     -fx-font-size:9px;
     -fx-text-fill: white; 
 
@@ -116,7 +116,7 @@ and open the template in the editor.
 .label{
     -fx-font-family:lao ui;
     -fx-text-fill: #ffffff;
-    -fx-font-weight:normal;
+    -fx-font-weight:bold;
     -fx-font-size:15px;
 }
 .info-label-bold{
@@ -124,9 +124,9 @@ and open the template in the editor.
     -fx-text-fill: black;
     -fx-font-weight:bold;
     -fx-font-size:13px;
-}.info-label-normal{
+}.info-label-bold{
     -fx-font-family:lao ui;
     -fx-text-fill: black;
-    -fx-font-weight:normal;
+    -fx-font-weight:bold;
     -fx-font-size:10px;
 }

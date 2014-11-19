@@ -19,6 +19,7 @@ import javafx.scene.layout.AnchorPane;
  * @author jafolabi
  */
 public class Chat_paneController implements Initializable {
+
     @FXML
     private AnchorPane chat_group_pane;
     @FXML
@@ -32,6 +33,6 @@ public class Chat_paneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

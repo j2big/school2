@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package school2;
 
 import java.net.URL;
@@ -21,6 +20,7 @@ import javafx.scene.input.MouseEvent;
  * @author Joshua
  */
 public class PopupController implements Initializable {
+
     @FXML
     private ImageView alert_icon;
     @FXML
@@ -36,11 +36,11 @@ public class PopupController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     public void okButtonClick(MouseEvent event) {
-       
+
     }
-    
+
 }

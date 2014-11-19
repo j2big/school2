@@ -11,171 +11,171 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1330.0" style="" styleClass="main_background" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.mainController">
-  <children>
-    <VBox id="VBox" alignment="CENTER" fillWidth="true" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
-      <children>
-        <AnchorPane minHeight="66.0" prefHeight="66.0" prefWidth="1330.0" style="" styleClass="header_pane" VBox.vgrow="NEVER">
-          <children>
-            <ImageView fitHeight="66.0" fitWidth="200.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="597.0" AnchorPane.rightAnchor="581.3">
-              <image>
-                <Image url="@media/school%202%20logo.png" />
-              </image>
-            </ImageView>
-            <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="43.0" spacing="5.0">
-              <children>
-                <ImageView id="message_image_button" fx:id="options_image_button" fitHeight="19.009536743164062" fitWidth="23.761920928955078" onMouseClicked="#optionsButtonClicked" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@media/options.fw.png" />
-                  </image>
-                </ImageView>
-                <ImageView id="chat_image_button" fx:id="global_image_button" fitHeight="20.00002221111575" fitWidth="22.000024795532227" onMouseClicked="#globalButtonClicked" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@media/global.fw.png" />
-                  </image>
-                </ImageView>
-                <ImageView id="room_image_button" fx:id="help_image_button" fitHeight="24.0" fitWidth="24.571428472345524" onMouseClicked="#helpButtonClicked" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@media/help%20icon.png" />
-                  </image>
-                </ImageView>
-              </children>
-            </HBox>
-            <HBox id="HBox" alignment="CENTER" layoutX="234.0" layoutY="44.0" spacing="5.0">
-              <children>
-                <ImageView fx:id="chat_image_button" fitHeight="22.0" fitWidth="30.0" onMouseClicked="#chatButtonClicked" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@media/chat%20icon.png" />
-                  </image>
-                </ImageView>
-                <ImageView fx:id="room_image_button" fitHeight="22.0" fitWidth="30.0" onMouseClicked="#roomButtonClicked" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@media/class%20chat.png" />
-                  </image>
-                </ImageView>
-                <ImageView fx:id="alertButton" fitHeight="22.0" fitWidth="30.0" onMouseClicked="#alertButtonClicked" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@media/alert%20icon.png" />
-                  </image>
-                </ImageView>
-                <ImageView id="search_imageton_but" fx:id="search_image_button" fitHeight="22.0" fitWidth="30.0" onMouseClicked="#searchButtonClicked" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                    <Image url="@media/search%20icon.png" />
-                  </image>
-                </ImageView>
-              </children>
-            </HBox>
-            <HBox id="HBox" alignment="CENTER_RIGHT" fillHeight="true" minHeight="81.0" prefHeight="81.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
-              <children>
-                <VBox id="VBox" alignment="CENTER" spacing="5.0">
-                  <children>
-                    <VBox id="VBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
-                      <children>
-                        <Label fx:id="username_info_text" styleClass="info-label-bold" text="Afolabi Joshua" />
-                        <Label fx:id="school_info_text" styleClass="info-label-normal" text="Yaba College of Technology" />
-                      </children>
-                    </VBox>
-                    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
-                      <children>
-                        <ImageView fx:id="school_logo" fitHeight="23.28953307647288" fitWidth="30.000076293945312" onMouseClicked="#schoolLogoClicked" pickOnBounds="true" preserveRatio="true">
-                          <image>
-                            <Image url="@media/logo.jpg" />
-                          </image>
+    <children>
+        <VBox id="VBox" alignment="CENTER" fillWidth="true" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+            <children>
+                <AnchorPane minHeight="66.0" prefHeight="66.0" prefWidth="1330.0" style="" styleClass="header_pane" VBox.vgrow="NEVER">
+                    <children>
+                        <ImageView fitHeight="66.0" fitWidth="200.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="597.0" AnchorPane.rightAnchor="581.3">
+                            <image>
+                                <Image url="@media/school%202%20logo.png" />
+                            </image>
                         </ImageView>
-                        <ImageView fx:id="settings_button" fitHeight="22.0" fitWidth="22.0" onMouseClicked="#settingsButtonClicked" pickOnBounds="true" preserveRatio="true">
-                          <image>
-                            <Image url="@media/settings.fw.png" />
-                          </image>
-                        </ImageView>
-                      </children>
-                    </HBox>
-                  </children>
-                </VBox>
-                <ImageView fx:id="user_avatar" fitHeight="66.0" fitWidth="145.33333333333331" onMouseClicked="#userAvatarClicked" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
-                  <image>
-                    <Image url="@media/images.jpg" />
-                  </image>
-                </ImageView>
-              </children>
-            </HBox>
-            <MenuButton fx:id="main_options_button" layoutX="105.0" layoutY="0.0" minHeight="20.0" minWidth="27.0" mnemonicParsing="false" onMouseClicked="#mainOptionClicked" prefHeight="20.0" prefWidth="27.0" styleClass="background_layer2" text="">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#closeOptionClick" text="close" fx:id="close_option" />
-                <MenuItem mnemonicParsing="false" onAction="#trayOptionClick" text="move to tray" fx:id="tray_option" />
-              </items>
-            </MenuButton>
-          </children>
-        </AnchorPane>
-        <AnchorPane id="AnchorPane" fx:id="parent_main_pane" VBox.vgrow="ALWAYS">
-          <children>
-            <AnchorPane id="AnchorPane" fx:id="daughter_main_pane" layoutX="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <children>
-                <Button fx:id="academics_button" graphicTextGap="0.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#academicsButtonClick" prefHeight="50.0" prefWidth="50.0" style="" styleClass="element-green, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="33.5">
-                  <graphic>
-                    <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-                      <image>
-                        <Image url="@media/academics.png" />
-                      </image>
-                    </ImageView>
-                  </graphic>
-                </Button>
-                <Button fx:id="studies_button" minHeight="44.571441650390625" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#studeisButtonClick" prefHeight="44.571441650390625" prefWidth="50.0" style="" styleClass="element-torqoise, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="97.5">
-                  <graphic>
-                    <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-                      <image>
-                        <Image url="@media/books%20.png" />
-                      </image>
-                    </ImageView>
-                  </graphic>
-                </Button>
-                <Button fx:id="calender_button" minHeight="50.0" minWidth="49.999900000002526" mnemonicParsing="false" onMouseClicked="#calenderButtonClick" prefHeight="43.7501220703125" prefWidth="49.999900000002526" style="" styleClass="element-orange, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="156.5">
-                  <graphic>
-                    <ImageView fitHeight="44.571428547761876" fitWidth="41.05263137817383" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
-                      <image>
-                        <Image url="@media/calaendar.png" />
-                      </image>
-                    </ImageView>
-                  </graphic>
-                </Button>
-                <AnchorPane fx:id="main_pane" prefHeight="-1.0" prefWidth="700.0" style="" styleClass="background_layer2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="0.5">
-                  <children>
-                    <Pane layoutX="198.0" layoutY="44.0" prefHeight="200.0" prefWidth="200.0" />
-                  </children>
+                        <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="43.0" spacing="5.0">
+                            <children>
+                                <ImageView id="message_image_button" fx:id="options_image_button" fitHeight="19.009536743164062" fitWidth="23.761920928955078" onMouseClicked="#optionsButtonClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@media/options.fw.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView id="chat_image_button" fx:id="global_image_button" fitHeight="20.00002221111575" fitWidth="22.000024795532227" onMouseClicked="#globalButtonClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@media/global.fw.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView id="room_image_button" fx:id="help_image_button" fitHeight="24.0" fitWidth="24.571428472345524" onMouseClicked="#helpButtonClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@media/help%20icon.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                        <HBox id="HBox" alignment="CENTER" layoutX="234.0" layoutY="44.0" spacing="5.0">
+                            <children>
+                                <ImageView fx:id="chat_image_button" fitHeight="22.0" fitWidth="30.0" onMouseClicked="#chatButtonClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@media/chat%20icon.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="room_image_button" fitHeight="22.0" fitWidth="30.0" onMouseClicked="#roomButtonClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@media/class%20chat.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="alertButton" fitHeight="22.0" fitWidth="30.0" onMouseClicked="#alertButtonClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@media/alert%20icon.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView id="search_imageton_but" fx:id="search_image_button" fitHeight="22.0" fitWidth="30.0" onMouseClicked="#searchButtonClicked" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@media/search%20icon.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                        <HBox id="HBox" alignment="CENTER_RIGHT" fillHeight="true" minHeight="81.0" prefHeight="81.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox id="VBox" alignment="CENTER" spacing="5.0">
+                                    <children>
+                                        <VBox id="VBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+                                            <children>
+                                                <Label fx:id="username_info_text" styleClass="info-label-bold" text="Afolabi Joshua" />
+                                                <Label fx:id="school_info_text" styleClass="info-label-normal" text="Yaba College of Technology" />
+                                            </children>
+                                        </VBox>
+                                        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+                                            <children>
+                                                <ImageView fx:id="school_logo" fitHeight="23.28953307647288" fitWidth="30.000076293945312" onMouseClicked="#schoolLogoClicked" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@media/logo.jpg" />
+                                                    </image>
+                                                </ImageView>
+                                                <ImageView fx:id="settings_button" fitHeight="22.0" fitWidth="22.0" onMouseClicked="#settingsButtonClicked" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@media/settings.fw.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <ImageView fx:id="user_avatar" fitHeight="66.0" fitWidth="145.33333333333331" onMouseClicked="#userAvatarClicked" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                                    <image>
+                                        <Image url="@media/images.jpg" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                        <MenuButton fx:id="main_options_button" layoutX="105.0" layoutY="0.0" minHeight="20.0" minWidth="27.0" mnemonicParsing="false" onMouseClicked="#mainOptionClicked" prefHeight="20.0" prefWidth="27.0" styleClass="background_layer2" text="">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#closeOptionClick" text="close" fx:id="close_option" />
+                                <MenuItem mnemonicParsing="false" onAction="#trayOptionClick" text="move to tray" fx:id="tray_option" />
+                            </items>
+                        </MenuButton>
+                    </children>
                 </AnchorPane>
-                <AnchorPane fx:id="updates_pane" prefHeight="570.0" prefWidth="300.0" style="" styleClass="mini_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="769.0" AnchorPane.topAnchor="0.5">
-                  <children>
-                    <Pane layoutX="127.0" layoutY="0.0" prefHeight="30.0" prefWidth="173.0" style="" styleClass="main_background_with_border">
-                      <children>
-                        <Label layoutX="53.0" layoutY="5.0" styleClass="mini_header_text_white" text="UPDATES" textFill="WHITE">
-                          <font>
-                            <Font name="Lao UI Bold" size="15.0" />
-                          </font>
-                        </Label>
-                      </children>
-                    </Pane>
-                    <MenuButton fx:id="filter_menu" layoutX="0.0" layoutY="0.0" minHeight="29.999900000002526" mnemonicParsing="false" onMouseClicked="#filterMenuClick" prefHeight="29.999900000002526" prefWidth="127.0" style="" styleClass="dropdown" text="FILTER">
-                      <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                        <MenuItem mnemonicParsing="false" text="Action 2" />
-                      </items>
-                    </MenuButton>
-                    <ScrollPane fx:id="scroll_pane" prefHeight="540.0" prefWidth="300.0" style="" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
-                      <content>
-                        <AnchorPane id="Content" fx:id="scrollpane_pane" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="mini_pane" />
-                      </content>
-                    </ScrollPane>
-                  </children>
+                <AnchorPane id="AnchorPane" fx:id="parent_main_pane" VBox.vgrow="ALWAYS">
+                    <children>
+                        <AnchorPane id="AnchorPane" fx:id="daughter_main_pane" layoutX="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button fx:id="academics_button" graphicTextGap="0.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#academicsButtonClick" prefHeight="50.0" prefWidth="50.0" style="" styleClass="element-green, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="33.5">
+                                    <graphic>
+                                        <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@media/academics.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="studies_button" minHeight="44.571441650390625" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#studeisButtonClick" prefHeight="44.571441650390625" prefWidth="50.0" style="" styleClass="element-torqoise, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="97.5">
+                                    <graphic>
+                                        <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@media/books%20.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="calender_button" minHeight="50.0" minWidth="49.999900000002526" mnemonicParsing="false" onMouseClicked="#calenderButtonClick" prefHeight="43.7501220703125" prefWidth="49.999900000002526" style="" styleClass="element-orange, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="156.5">
+                                    <graphic>
+                                        <ImageView fitHeight="44.571428547761876" fitWidth="41.05263137817383" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@media/calaendar.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <AnchorPane fx:id="main_pane" prefHeight="-1.0" prefWidth="700.0" style="" styleClass="background_layer2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="0.5">
+                                    <children>
+                                        <Pane layoutX="198.0" layoutY="44.0" prefHeight="200.0" prefWidth="200.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="updates_pane" prefHeight="570.0" prefWidth="300.0" style="" styleClass="mini_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="769.0" AnchorPane.topAnchor="0.5">
+                                    <children>
+                                        <Pane layoutX="127.0" layoutY="0.0" prefHeight="30.0" prefWidth="173.0" style="" styleClass="main_background_with_border">
+                                            <children>
+                                                <Label layoutX="53.0" layoutY="5.0" styleClass="mini_header_text_white" text="UPDATES" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Lao UI Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                        <MenuButton fx:id="filter_menu" layoutX="0.0" layoutY="0.0" minHeight="29.999900000002526" mnemonicParsing="false" onMouseClicked="#filterMenuClick" prefHeight="29.999900000002526" prefWidth="127.0" style="" styleClass="dropdown" text="FILTER">
+                                            <items>
+                                                <MenuItem mnemonicParsing="false" text="Action 1" />
+                                                <MenuItem mnemonicParsing="false" text="Action 2" />
+                                            </items>
+                                        </MenuButton>
+                                        <ScrollPane fx:id="scroll_pane" prefHeight="540.0" prefWidth="300.0" style="" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                            <content>
+                                                <AnchorPane id="Content" fx:id="scrollpane_pane" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="mini_pane" />
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
                 </AnchorPane>
-              </children>
-            </AnchorPane>
-          </children>
-          <VBox.margin>
-            <Insets />
-          </VBox.margin>
-        </AnchorPane>
-      </children>
-    </VBox>
-  </children>
-  <stylesheets>
-    <URL value="@school2.css" />
-  </stylesheets>
+            </children>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@school2.css" />
+    </stylesheets>
 </AnchorPane>

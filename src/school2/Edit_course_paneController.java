@@ -58,7 +58,7 @@ public class Edit_course_paneController implements Initializable {
     EditCourseDBHandler edb = new EditCourseDBHandler();
     private ObservableList<String> coursesOList;
     private ArrayList<String> courseAList = new ArrayList<String>();
-    Logger ecp = new Logger();
+
     @FXML
     private Button save_course_button;
 
@@ -67,7 +67,7 @@ public class Edit_course_paneController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        ecp.log("Inside Edit Courses");
+       
         save_course_button.setDisable(true);
         loadList();
         getSelectedItem();
@@ -85,7 +85,7 @@ public class Edit_course_paneController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 selectedTitle = newValue;
-                ecp.log(selectedTitle);
+
                 getSelectedFromDB(selectedTitle);
                 setTexts();
             }
@@ -186,7 +186,7 @@ public class Edit_course_paneController implements Initializable {
         save_course_button.setDisable(true);
         edit_course_button.setDisable(false);
         setDisabled();
-        ecp.log("Database Updated");
+
         updateDatabase(getCourseTitle(), getCourseCode(), getCourseUnit(), getCourseType(), getCourseLecturer());
     }
 
@@ -198,7 +198,7 @@ public class Edit_course_paneController implements Initializable {
             connection = DriverManager.getConnection("jdbc:sqlite:database/school2.db");
             preparedStatement = connection.prepareStatement(updatesql);
             preparedStatement.executeUpdate();
-            ecp.log("Database Updated");
+            
 
             connection.close();
             preparedStatement.close();

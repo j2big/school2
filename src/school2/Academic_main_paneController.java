@@ -25,7 +25,7 @@ import javafx.scene.layout.Pane;
  */
 public class Academic_main_paneController implements Initializable {
 
-    Logger acd = new Logger();
+   
     @FXML
     private MenuButton courses_menubutton;
     @FXML

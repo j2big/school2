@@ -16,14 +16,15 @@ import java.sql.Statement;
  */
 public class DatabaseCreator {
 
-    Logger dbc = new Logger();
+   
     Connection connection;
     Statement statement;
 
     public void create() throws Exception {
+        
         File db = new File("database/school2.db");
         if (db.exists()) {
-            dbc.log("Database Already Exists!!");
+            
         } else {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:database/school2.db");
@@ -32,7 +33,7 @@ public class DatabaseCreator {
             //creating non-existing tables
             //creating course table
             statement.executeUpdate("create table course_table(course_title varchar(30),course_code varchar(5),course_unit integer(1),course_type varchar(5),course_lecturer varchar(30));");
-            dbc.log("COURSE TABLE CREATED!!");
+            
         }
     }
 

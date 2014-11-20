@@ -26,7 +26,7 @@ public class RemoveCourseDBHandler {
     private ResultSet resultSet;
     String sql = "";
     ArrayList<String> coursesList = new ArrayList();
-    Logger rc = new Logger();
+   
 
     /* public RemoveCourseDBHandler(String c_title, String c_code, String c_unit, String c_type, String c_lecturer) {
      rc.log("Database entered");

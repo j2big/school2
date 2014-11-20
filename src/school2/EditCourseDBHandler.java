@@ -26,7 +26,7 @@ public class EditCourseDBHandler {
     private ResultSet resultSet;
     String sql = "";
     ArrayList<String> coursesList = new ArrayList();
-    Logger ec = new Logger();
+  
 
     public ArrayList<String> getCourseTitles() {
         try {

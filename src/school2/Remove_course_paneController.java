@@ -39,7 +39,6 @@ public class Remove_course_paneController implements Initializable {
     
      * Initializes the controller class.
      */
-    Logger rcp = new Logger();
     @FXML
     private ListView<String> coursesList;
     @FXML
@@ -57,7 +56,7 @@ public class Remove_course_paneController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        rcp.log("inside Initialize method ");
+
         coursesOList = FXCollections.observableList(rcdb.getCourseTitles());
         coursesList.setItems(coursesOList);
     }

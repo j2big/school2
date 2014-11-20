@@ -15,14 +15,14 @@ import java.sql.PreparedStatement;
  */
 public class AddCourseDBHandler {
 
-    Logger ac = new Logger();
+   
 
     private String ctitle, ccode, cunit, ctype, clecturer;
     private Connection connection;
     private PreparedStatement preparedStatement;
 
     public AddCourseDBHandler(String c_title, String c_code, String c_unit, String c_type, String c_lecturer) {
-        ac.log("Database entered");
+       
         ctitle = c_title;
         ccode = c_code;
         cunit = c_unit;
@@ -37,7 +37,7 @@ public class AddCourseDBHandler {
     }
 
     private void connectDb() throws Exception {
-        ac.log("Connecting to Database");
+
         String sql = "insert into course_table values(?,?,?,?,?);";
 
         Class.forName("org.sqlite.JDBC");
@@ -51,7 +51,7 @@ public class AddCourseDBHandler {
         preparedStatement.setString(5, clecturer);
 
         preparedStatement.executeUpdate();
-        ac.log("Course: " + ctitle + " added");
+
 
         connection.close();
 

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1330.0" style="" styleClass="main_background" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.Daughter_paneController">
+    <children>
+        <VBox id="VBox" alignment="CENTER" fillWidth="true" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+            <children>
+                <AnchorPane id="AnchorPane" fx:id="parent_main_pane" VBox.vgrow="ALWAYS">
+                    <children>
+                        <AnchorPane id="AnchorPane" fx:id="daughter_main_pane" layoutX="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button fx:id="academics_button" graphicTextGap="0.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#academicsButtonClick" prefHeight="50.0" prefWidth="50.0" style="" styleClass="element-green, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="33.5">
+                                    <graphic>
+                                        <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@media/academics.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="studies_button" minHeight="44.571441650390625" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#studeisButtonClick" prefHeight="44.571441650390625" prefWidth="50.0" style="" styleClass="element-torqoise, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="97.5">
+                                    <graphic>
+                                        <ImageView fitHeight="50.0" fitWidth="50.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@media/books%20.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button fx:id="calender_button" minHeight="50.0" minWidth="49.999900000002526" mnemonicParsing="false" onMouseClicked="#calenderButtonClick" prefHeight="43.7501220703125" prefWidth="49.999900000002526" style="" styleClass="element-orange, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="156.5">
+                                    <graphic>
+                                        <ImageView fitHeight="44.571428547761876" fitWidth="41.05263137817383" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@media/calaendar.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <AnchorPane fx:id="main_pane" prefHeight="-1.0" prefWidth="700.0" style="" styleClass="background_layer2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="0.5">
+                                    <children>
+                                        <Pane layoutX="198.0" layoutY="44.0" prefHeight="200.0" prefWidth="200.0" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="updates_pane" prefHeight="570.0" prefWidth="300.0" style="" styleClass="mini_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="769.0" AnchorPane.topAnchor="0.5">
+                                    <children>
+                                        <Pane layoutX="127.0" layoutY="0.0" prefHeight="30.0" prefWidth="173.0" style="" styleClass="main_background_with_border">
+                                            <children>
+                                                <Label layoutX="53.0" layoutY="5.0" styleClass="mini_header_text_white" text="UPDATES" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Lao UI Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                        <MenuButton fx:id="filter_menu" layoutX="0.0" layoutY="0.0" minHeight="29.999900000002526" mnemonicParsing="false" onMouseClicked="#filterMenuClick" prefHeight="29.999900000002526" prefWidth="127.0" style="" styleClass="dropdown" text="FILTER">
+                                            <items>
+                                                <MenuItem mnemonicParsing="false" text="Action 1" />
+                                                <MenuItem mnemonicParsing="false" text="Action 2" />
+                                            </items>
+                                        </MenuButton>
+                                        <ScrollPane fx:id="scroll_pane" prefHeight="540.0" prefWidth="300.0" style="" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                            <content>
+                                                <AnchorPane id="Content" fx:id="scrollpane_pane" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="mini_pane" />
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@school2.css" />
+    </stylesheets>
+</AnchorPane>

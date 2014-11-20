@@ -50,11 +50,11 @@ public class Add_course_paneController implements Initializable {
         cType = FXCollections.observableList(type);
         course_type_choice.setItems(cType);
     }
-    Logger acp = new Logger();
+
 
     @FXML
     private void addCourseButtonClick(MouseEvent event) {
-        acp.log("Add course button clicked!");
+       
         AddCourseDBHandler addc = new AddCourseDBHandler(getCourseTitle(), getCourseCode(), getCourseUnit(), getCourseType(), getCourseLecturer());
         clearALL();
     }

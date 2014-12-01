@@ -39,25 +39,4 @@ public class schoolLog {
     public void logSevere(String severe_message) {
         schlog.severe(severe_message);
     }
-
-    public void logWarning(String warning_message) {
-        schlog.severe(warning_message);
-    }
-
-    public void logConfig(String config_message) {
-        schlog.severe(config_message);
-    }
-
-    public void logFine(String fine_message) {
-        schlog.severe(fine_message);
-    }
-
-    public void logFiner(String finer_message) {
-        schlog.severe(finer_message);
-    }
-
-    public void logFinest(String finest_message) {
-        schlog.severe(finest_message);
-    }
-
 }

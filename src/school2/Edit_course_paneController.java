@@ -67,7 +67,7 @@ public class Edit_course_paneController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
+
         save_course_button.setDisable(true);
         loadList();
         getSelectedItem();
@@ -198,7 +198,6 @@ public class Edit_course_paneController implements Initializable {
             connection = DriverManager.getConnection("jdbc:sqlite:database/school2.db");
             preparedStatement = connection.prepareStatement(updatesql);
             preparedStatement.executeUpdate();
-            
 
             connection.close();
             preparedStatement.close();

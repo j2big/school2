@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="academic_display_pane" prefHeight="515.0" prefWidth="700.0" styleClass="background_layer2" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.academics.Add_assignment_paneController">
+    <children>
+        <HBox id="HBox" alignment="CENTER" layoutX="139.0" layoutY="83.0" spacing="40.0">
+            <children>
+                <HBox id="HBox" alignment="CENTER" spacing="5.0" />
+            </children>
+        </HBox>
+        <VBox id="VBox" alignment="CENTER_LEFT" fillWidth="false" layoutX="114.0" layoutY="107.0" spacing="10.0">
+            <children>
+                <HBox id="HBox" alignment="TOP_CENTER" spacing="20.0">
+                    <children>
+                        <Label text="Course Title:" />
+                        <ChoiceBox fx:id="course_title_choicebox" prefWidth="347.0" styleClass="main-menu-button">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Item 1" />
+                                    <String fx:value="Item 2" />
+                                    <String fx:value="Item 3" />
+                                </FXCollections>
+                            </items>
+                        </ChoiceBox>
+                    </children>
+                </HBox>
+                <HBox id="HBox" alignment="TOP_CENTER" spacing="14.0">
+                    <children>
+                        <Label text="Course Code:" />
+                        <TextField fx:id="course_code_text" editable="false" prefWidth="82.0" />
+                    </children>
+                </HBox>
+                <HBox id="HBox" alignment="TOP_CENTER" spacing="25.0">
+                    <children>
+                        <Label text="Total Score:" />
+                        <TextField fx:id="total_score_text" alignment="CENTER_LEFT" prefWidth="82.0" />
+                    </children>
+                </HBox>
+                <HBox id="HBox" alignment="TOP_CENTER" spacing="28.0">
+                    <children>
+                        <Label text="Your Score:" />
+                        <TextField fx:id="your_score_text" prefWidth="82.0" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Pane prefHeight="34.0" prefWidth="700.0" styleClass="header_pane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label fx:id="HEADER" layoutX="290.0" layoutY="11.0" prefWidth="185.0" styleClass="info-label-bold" text="ADD ASSIGNMENT SCORE" textAlignment="JUSTIFY" />
+            </children>
+        </Pane>
+    </children>
+    <stylesheets>
+        <URL value="@../school2.css" />
+    </stylesheets>
+</AnchorPane>

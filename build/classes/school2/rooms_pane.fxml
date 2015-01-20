@@ -32,6 +32,6 @@
         <Insets />
     </padding>
     <stylesheets>
-        <URL value="@school2.css" />
+        <URL value="@../school2.css" />
     </stylesheets>
 </AnchorPane>

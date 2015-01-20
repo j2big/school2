@@ -21,6 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
+
 /**
  *
  * @author Joshua
@@ -78,24 +79,28 @@ public class mainController implements Initializable {
     private MenuItem close_option;
     @FXML
     private MenuItem tray_option;
+    
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-
+        
     }
 
     @FXML
     private void academicsButtonClick(MouseEvent event) throws Exception {
-        loadView("academic_main_pane.fxml");
+        loadView("academics/academic_main_pane.fxml");
     }
 
     @FXML
-    private void studeisButtonClick(MouseEvent event) {
+    private void studeisButtonClick(MouseEvent event) throws Exception{
+        loadView("study/study_main_pane.fxml");
     }
 
     @FXML
-    private void calenderButtonClick(MouseEvent event) {
+    private void calenderButtonClick(MouseEvent event) throws Exception {
+        loadView("calender/calender_main_pane.fxml");
     }
 
     @FXML
@@ -121,9 +126,9 @@ public class mainController implements Initializable {
         parent_main_pane.getChildren().add(node);
     }
 
-    public void loadView(String fxml) throws Exception {
+    public  void loadView(String fxml) throws Exception {
         main_pane.getChildren().remove(0);
-        Node node = FXMLLoader.load(getClass().getResource(fxml));
+       Node node = FXMLLoader.load(getClass().getResource(fxml));
         main_pane.getChildren().add(node);
     }
 

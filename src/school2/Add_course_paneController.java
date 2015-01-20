@@ -44,19 +44,22 @@ public class Add_course_paneController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        setCourseTypes();
+        cType = FXCollections.observableList(type);
+            course_type_choice.setItems(cType);
+    }
+
+    public void setCourseTypes() {
         type.add("Elective");
         type.add("Compulsory");
 
-        cType = FXCollections.observableList(type);
-        course_type_choice.setItems(cType);
     }
-
 
     @FXML
     private void addCourseButtonClick(MouseEvent event) {
-       
         AddCourseDBHandler addc = new AddCourseDBHandler(getCourseTitle(), getCourseCode(), getCourseUnit(), getCourseType(), getCourseLecturer());
         clearALL();
+        setCourseTypes();
     }
 
     public String getCourseTitle() {
@@ -93,6 +96,6 @@ public class Add_course_paneController implements Initializable {
         course_lecturer_text.clear();
         course_unit_text.clear();
         course_code_text.clear();
-        course_type_choice.getItems().clear();
+        //course_type_choice.getItems().clear();
     }
 }

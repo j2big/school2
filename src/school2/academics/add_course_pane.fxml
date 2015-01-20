@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="academic_display_pane" prefHeight="515.0" prefWidth="700.0" styleClass="background_layer2" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.academics.Add_course_paneController">
+    <children>
+        <HBox id="HBox" alignment="BOTTOM_RIGHT" fillHeight="false" spacing="50.0" AnchorPane.leftAnchor="122.0" AnchorPane.topAnchor="67.0">
+            <children>
+                <HBox id="HBox" alignment="CENTER" fillHeight="true" spacing="5.0">
+                    <children>
+                        <VBox id="VBox" alignment="CENTER" spacing="18.5">
+                            <children>
+                                <Label text="course title:" />
+                                <Label text="course code:" />
+                                <Label text="course unit:" />
+                                <Label text="course type:" />
+                                <Label text="course lecturer:" />
+                            </children>
+                        </VBox>
+                        <VBox id="VBox" alignment="BOTTOM_LEFT" fillWidth="false" spacing="14.0">
+                            <children>
+                                <TextField fx:id="course_title_text" prefWidth="200.0" />
+                                <TextField fx:id="course_code_text" prefWidth="200.0" />
+                                <TextField fx:id="course_unit_text" prefWidth="70.0" />
+                                <ChoiceBox fx:id="course_type_choice" prefWidth="200.0" styleClass="main-menu-button">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Item 1" />
+                                            <String fx:value="Item 2" />
+                                            <String fx:value="Item 3" />
+                                        </FXCollections>
+                                    </items>
+                                </ChoiceBox>
+                                <TextField fx:id="course_lecturer_text" prefWidth="200.0" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <Button fx:id="add_course_button" graphicTextGap="4.0" mnemonicParsing="false" onMouseClicked="#addCourseButtonClick" styleClass="element-green" text="ADD" textAlignment="CENTER" />
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+        <URL value="@../school2.css" />
+    </stylesheets>
+</AnchorPane>

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="700.0" styleClass="background_layer2" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.academics.Academic_main_paneController">
+<AnchorPane id="AnchorPane" fx:id="academic_main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="700.0" styleClass="background_layer2" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.academics.Academic_main_paneController">
   <children>
     <AnchorPane id="main_pane" layoutX="0.0" layoutY="0.0" prefHeight="-1.0" prefWidth="700.0" style="" styleClass="background_layer2">
       <children>

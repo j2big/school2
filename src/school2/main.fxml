@@ -14,7 +14,7 @@
   <children>
     <VBox id="VBox" alignment="CENTER" fillWidth="true" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
       <children>
-        <AnchorPane minHeight="66.0" prefHeight="66.0" prefWidth="1330.0" style="" styleClass="header_pane" VBox.vgrow="NEVER">
+        <AnchorPane minHeight="66.0" minWidth="1338.0" prefHeight="66.0" prefWidth="1338.0" style="" styleClass="header_pane" VBox.vgrow="NEVER">
           <children>
             <ImageView fitHeight="66.0" fitWidth="200.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="597.0" AnchorPane.rightAnchor="581.3">
               <image>
@@ -110,7 +110,8 @@
         </AnchorPane>
         <AnchorPane id="AnchorPane" fx:id="parent_main_pane" VBox.vgrow="ALWAYS">
           <children>
-            <AnchorPane id="AnchorPane" fx:id="daughter_main_pane" layoutX="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane id="AnchorPane" fx:id="options_main_pane" layoutX="0.0" layoutY="0.0" visible="false" />
+            <AnchorPane id="AnchorPane" fx:id="daughter_main_pane" layoutX="0.0" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
                 <Button fx:id="academics_button" graphicTextGap="0.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#academicsButtonClick" prefHeight="50.0" prefWidth="50.0" style="" styleClass="element-green, home-buttons" text="" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="33.5">
                   <graphic>
@@ -139,28 +140,32 @@
                     </ImageView>
                   </graphic>
                 </Button>
-                <AnchorPane fx:id="main_pane" prefHeight="-1.0" prefWidth="700.0" style="" styleClass="background_layer2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="0.5">
+                <AnchorPane fx:id="main_pane" prefHeight="-1.0" prefWidth="700.0" style="" styleClass="background_layer2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="0.0">
                   <children>
                     <Pane layoutX="198.0" layoutY="44.0" prefHeight="200.0" prefWidth="200.0" />
                   </children>
                 </AnchorPane>
-                <AnchorPane fx:id="updates_pane" prefHeight="570.0" prefWidth="300.0" style="" styleClass="mini_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="769.0" AnchorPane.topAnchor="0.5">
+                <AnchorPane fx:id="updates_pane" prefHeight="570.5" prefWidth="347.0" style="" styleClass="mini_pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="769.0" AnchorPane.topAnchor="0.5">
                   <children>
-                    <Pane layoutX="127.0" layoutY="0.0" prefHeight="30.0" prefWidth="173.0" style="" styleClass="main_background_with_border">
+                    <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="0.0" prefWidth="347.0" spacing="5.0">
                       <children>
-                        <Label layoutX="53.0" layoutY="5.0" styleClass="mini_header_text_white" text="UPDATES" textFill="WHITE">
-                          <font>
-                            <Font name="Lao UI Bold" size="15.0" />
-                          </font>
-                        </Label>
+                        <MenuButton fx:id="filter_menu" minHeight="29.999900000002526" mnemonicParsing="false" onMouseClicked="#filterMenuClick" prefHeight="30.0" prefWidth="164.0" style="" styleClass="dropdown" text="FILTER">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </MenuButton>
+                        <Pane prefHeight="30.0" prefWidth="173.0" style="" styleClass="main_background_with_border">
+                          <children>
+                            <Label layoutX="53.0" layoutY="5.0" styleClass="mini_header_text_white" text="UPDATES" textFill="WHITE">
+                              <font>
+                                <Font name="Lao UI Bold" size="15.0" />
+                              </font>
+                            </Label>
+                          </children>
+                        </Pane>
                       </children>
-                    </Pane>
-                    <MenuButton fx:id="filter_menu" layoutX="0.0" layoutY="0.0" minHeight="29.999900000002526" mnemonicParsing="false" onMouseClicked="#filterMenuClick" prefHeight="29.999900000002526" prefWidth="127.0" style="" styleClass="dropdown" text="FILTER">
-                      <items>
-                        <MenuItem mnemonicParsing="false" text="Action 1" />
-                        <MenuItem mnemonicParsing="false" text="Action 2" />
-                      </items>
-                    </MenuButton>
+                    </HBox>
                     <ScrollPane fx:id="scroll_pane" prefHeight="540.0" prefWidth="300.0" style="" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
                       <content>
                         <AnchorPane id="Content" fx:id="scrollpane_pane" minHeight="0.0" minWidth="0.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="mini_pane" />

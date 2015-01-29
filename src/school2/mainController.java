@@ -21,7 +21,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-
 /**
  *
  * @author Joshua
@@ -79,13 +78,14 @@ public class mainController implements Initializable {
     private MenuItem close_option;
     @FXML
     private MenuItem tray_option;
-    
-    
+    @FXML
+    private AnchorPane options_main_pane;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        options_image_button.setDisable(true);
         // TODO
-        
+
     }
 
     @FXML
@@ -94,7 +94,7 @@ public class mainController implements Initializable {
     }
 
     @FXML
-    private void studeisButtonClick(MouseEvent event) throws Exception{
+    private void studeisButtonClick(MouseEvent event) throws Exception {
         loadView("study/study_main_pane.fxml");
     }
 
@@ -120,60 +120,86 @@ public class mainController implements Initializable {
     private void trayOptionClick(ActionEvent event) {
     }
 
-    public void loadTabView(String fxml) throws Exception {
-        parent_main_pane.getChildren().remove(0);
-        Node node = FXMLLoader.load(getClass().getResource(fxml));
-        parent_main_pane.getChildren().add(node);
+    public void loadOptionsView(String fxml) throws Exception {
+        daughter_main_pane.setVisible(false);
+        daughter_main_pane.setDisable(false);
+        if (options_main_pane.getChildren().isEmpty()) {
+           //do nothing
+        }else{
+            options_main_pane.getChildren().remove(0); //remove content
+        }
+         Node node = FXMLLoader.load(getClass().getResource(fxml));
+        options_main_pane.getChildren().add(node);
+        options_main_pane.setDisable(false);
+        options_main_pane.setVisible(true);
     }
 
-    public  void loadView(String fxml) throws Exception {
+    public void loadHomeView() {
+        options_main_pane.setVisible(false);
+        options_main_pane.setDisable(true);
+        options_main_pane.getChildren().remove(0);
+        daughter_main_pane.setVisible(true);
+
+    }
+
+    public void loadView(String fxml) throws Exception {
         main_pane.getChildren().remove(0);
-       Node node = FXMLLoader.load(getClass().getResource(fxml));
+        Node node = FXMLLoader.load(getClass().getResource(fxml));
         main_pane.getChildren().add(node);
     }
 
     @FXML
-    private void optionsButtonClicked(MouseEvent event) throws Exception {
-        loadTabView("daughter_pane.fxml");
+    private void optionsButtonClicked(MouseEvent event) {
+        loadHomeView();
+
     }
 
     @FXML
     private void helpButtonClicked(MouseEvent event) {
+        options_image_button.setDisable(false);
     }
 
     @FXML
     private void settingsButtonClicked(MouseEvent event) {
+        options_image_button.setDisable(false);
     }
 
     @FXML
     private void userAvatarClicked(MouseEvent event) {
+        options_image_button.setDisable(false);
     }
 
     @FXML
     private void chatButtonClicked(MouseEvent event) throws Exception {
-        loadTabView("chat_pane.fxml");
+        options_image_button.setDisable(false);
+        loadOptionsView("options/chat_pane.fxml");
     }
 
     @FXML
     private void roomButtonClicked(MouseEvent event) throws Exception {
-        loadTabView("rooms_pane.fxml");
+        options_image_button.setDisable(false);
+        loadOptionsView("options/rooms_pane.fxml");
 
     }
 
     @FXML
     private void globalButtonClicked(MouseEvent event) {
+        options_image_button.setDisable(false);
     }
 
     @FXML
     private void alertButtonClicked(MouseEvent event) {
+        options_image_button.setDisable(false);
     }
 
     @FXML
     private void searchButtonClicked(MouseEvent event) {
+        options_image_button.setDisable(false);
     }
 
     @FXML
     private void schoolLogoClicked(MouseEvent event) {
+        options_image_button.setDisable(false);
     }
 
 }

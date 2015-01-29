@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="-1.0" prefWidth="-1.0" styleClass="mainFxmlClass, main_background" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="school2.options.Chat_paneController">
+    <children>
+        <Pane prefHeight="22.0" prefWidth="1070.0" styleClass="header_pane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+            <children>
+                <Label layoutX="518.0" layoutY="2.0" styleClass="info-label-bold" text="CHAT" />
+            </children>
+        </Pane>
+        <AnchorPane fx:id="chat_group_pane" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <Accordion fx:id="chat_group" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <expandedPane>
+                        <TitledPane id="x1" fx:id="test_2" animated="false" text="Adeosun Peter">
+                            <content>
+                                <AnchorPane id="Content" minHeight="527.0" minWidth="1000.0" prefHeight="-1.0" prefWidth="-1.0" />
+                            </content>
+                        </TitledPane>
+                    </expandedPane>
+                    <panes>
+                        <TitledPane fx:id="test_1" animated="false" text="Adeyinka Emmanuel">
+                            <content>
+                                <AnchorPane id="Content" minHeight="527.0" minWidth="1000.0" prefHeight="-1.0" prefWidth="-1.0" />
+                            </content>
+                        </TitledPane>
+                        <fx:reference source="test_2" />
+                    </panes>
+                </Accordion>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </AnchorPane>
+    </children>
+    <padding>
+        <Insets />
+    </padding>
+    <stylesheets>
+        <URL value="@../school2.css" />
+    </stylesheets>
+</AnchorPane>

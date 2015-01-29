@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -35,6 +36,7 @@ public class School2 extends Application {
         // firstTime = true;
         //make stage fit any screen size
         Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+        
         stage.setX(screen.getMinX());
         stage.setY(screen.getMinY());
         stage.setWidth(screen.getWidth());

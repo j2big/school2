@@ -16,18 +16,13 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import school2.mainController;
-import school2.mainController;
 
 /**
  * FXML Controller class
  *
  * @author jafolabi
  */
-public class Daughter_paneController extends mainController implements Initializable {
-
-    @FXML
-    private AnchorPane parent_main_pane;
+public class Daughter_paneController implements Initializable {
     @FXML
     private AnchorPane daughter_main_pane;
     @FXML
@@ -53,29 +48,33 @@ public class Daughter_paneController extends mainController implements Initializ
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
-
-    public void loadView(String fxml) throws Exception {
-        main_pane.getChildren().remove(0);
-        Node node = FXMLLoader.load(getClass().getResource(fxml));
-        main_pane.getChildren().add(node);
-    }
+    }    
 
     @FXML
     private void academicsButtonClick(MouseEvent event) throws Exception {
-        loadView("academic_main_pane.fxml");
+        loadView("academics/academic_main_pane.fxml");
     }
 
     @FXML
-    private void studeisButtonClick(MouseEvent event) {
+    private void studeisButtonClick(MouseEvent event) throws Exception{
+        loadView("study/study_main_pane.fxml");
     }
 
     @FXML
-    private void calenderButtonClick(MouseEvent event) {
+    private void calenderButtonClick(MouseEvent event) throws Exception {
+        loadView("calender/calender_main_pane.fxml");
     }
+
 
     @FXML
     private void filterMenuClick(MouseEvent event) {
     }
+    
+     public  void loadView(String fxml) throws Exception {
+        main_pane.getChildren().remove(0);
+       Node node = FXMLLoader.load(getClass().getResource(fxml));
+        main_pane.getChildren().add(node);
+    }
 
+    
 }

@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -17,6 +18,7 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 
 /**
  * FXML Controller class
@@ -25,7 +27,7 @@ import javafx.scene.layout.Pane;
  */
 public class Academic_main_paneController implements Initializable {
 
-   
+    FadeTransition fadeIn = new FadeTransition(Duration.millis(3000));
     @FXML
     private MenuButton courses_menubutton;
     @FXML
@@ -57,12 +59,16 @@ public class Academic_main_paneController implements Initializable {
     private ObservableList<MenuItem> courses_list;
     @FXML
     private Pane dummy_pane;
+    @FXML
+    private AnchorPane academic_main_pane;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // fadeIn(academic_display_pane);
+        //fadeIn.playFromStart();
         // TODO
     }
 
@@ -131,4 +137,27 @@ public class Academic_main_paneController implements Initializable {
     private void performanceAnalysisOptionClcik(ActionEvent event) {
     }
 
+    private void fadeIn(Pane p) {
+        fadeIn.setNode(p);
+        fadeIn.setFromValue(0.0);
+        fadeIn.setToValue(1.0);
+        fadeIn.setCycleCount(1);
+        // fadeIn.setAutoReverse(false);
+    }
+
+    private void fadeOut(Pane p) {
+        fadeIn.setNode(p);
+        fadeIn.setFromValue(1.0);
+        fadeIn.setToValue(0.0);
+        fadeIn.setCycleCount(1);
+        // fadeIn.setAutoReverse(true);
+    }
+    /* private void fadeInOut(Pane p) {
+     fadeIn.setNode(p);
+     fadeIn.setFromValue(1.0);
+     fadeIn.setToValue(0.0);
+     fadeIn.setCycleCount(1);
+     fadeIn.setAutoReverse(true);
+     }
+     */
 }
